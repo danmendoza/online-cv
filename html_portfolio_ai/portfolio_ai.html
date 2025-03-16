@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Mendoza - Multimedia Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .main-content {
+            flex: 2;
+            padding: 50px 30px 30px 30px;
+            border-right: 1px solid #eee;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 30px;
+            background-color: #e8e8e8;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #4a89dc;
+        }
+        h1, h2, h3 {
+            color: #4a89dc;
+            margin-bottom: 15px;
+        }
+        .tagline {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .contact-list {
+            list-style: none;
+        }
+        .contact-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-list i {
+            width: 20px;
+            margin-right: 10px;
+            color: #4a89dc;
+        }
+        .contact-list a {
+            color: #555;
+            text-decoration: none;
+        }
+        .contact-list a:hover {
+            color: #4a89dc;
+        }
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+        .experience-title, .education-title, .project-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .experience-company, .education-university {
+            font-style: italic;
+            color: #555;
+        }
+        .experience-time, .education-time {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .project-container {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        .project-image {
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .project-content {
+            flex: 1;
+        }
+        .project-title {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4a89dc;
+            text-decoration: none;
+        }
+        .project-title:hover {
+            text-decoration: underline;
+        }
+        .project-tagline {
+            color: #555;
+        }
+        .skills-list {
+            list-style: none;
+        }
+        .skills-list li {
+            margin-bottom: 15px;
+        }
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .skill-level {
+            height: 100%;
+            background-color: #4a89dc;
+            border-radius: 5px;
+        }
+        .languages-list, .interests-list {
+            list-style: none;
+        }
+        .languages-list li, .interests-list li {
+            margin-bottom: 10px;
+        }
+        .language-name, .interest-item {
+            font-weight: bold;
+        }
+        .language-level {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+        .footer i {
+            color: #e25555;
+        }
+        .footer a {
+            color: #4a89dc;
+            text-decoration: none;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column (Main Content) -->
+        <div class="main-content">
+            <!-- Career Profile Section -->
+            <div class="section" style="margin-top: 20px;">
+                <h2>Career Profile</h2>
+                <p>Experience in software development projects, team work and meeting deadlines. Mature in problem-solving and pipeline support tasks, demonstrated at SKYDANCE ANIMATION by developing Python tools to enhance workflows. Also got experience in Unity while working as a 3D Developer at IRTIC. Skilled in UI/UX and implementation of custom graphics and logic in applications, plug-ins and/or games. Transforming complex requirements into user-friendly solutions.</p>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section">
+                <h2>Experiences</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Junior Technical Director</div>
+                    <div class="experience-company">Skydance Animation Madrid</div>
+                    <div class="experience-time">January 2022 – December 2024</div>
+                    <p>Helped studio departments by developing python tools and plug-ins for improving their workflows. Skills:</p>
+                    <ul>
+                        <li>Software development: having an Agile approach, involved in different projects where departments required custom approaches. Involved in backend, frontend, and UX/UI design.</li>
+                        <li>Support: Attending to non-technical users and repairing the studio's pipeline were the main themes.</li>
+                        <li>Debug: Troubleshooting and optimizations.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Unity 3D Developer</div>
+                    <div class="experience-company">IRTIC, Valencia</div>
+                    <div class="experience-time">January 2021 – April 2021</div>
+                    <p>Developed a physics based simulation of a surgical thread in Virtual Reality. Skills:</p>
+                    <ul>
+                        <li>Design user interfaces for VR applications using Unity's UI system.</li>
+                        <li>Research physics papers.</li>
+                        <li>Implementation of the simulation in Unity3D using C#.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-title">Multimedia Software Engineering Degree</div>
+                    <div class="education-university">University of Valencia</div>
+                    <div class="education-time">2017 - 2021</div>
+                    <p>Describe your study here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    <ul>
+                        <li>Bullet point</li>
+                        <li>Bullet point</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section">
+                <h2>Projects</h2>
+                <p>List of projects involved into.</p>
+                
+                <div class="project-container">
+                    <img src="/api/placeholder/300/300" alt="Spellbound" class="project-image">
+                    <div class="project-content">
+                        <a href="https://skydance.com/animation/#-" class="project-title">Spellbound</a>
+                        <p class="project-tagline">When a powerful spell turns her parents into giant monsters, a teenage princess must journey into the wild to reverse the curse before it's too late. 3D Animation film Published on Netflix 2024.</p>
+                    </div>
+                </div>
+                
+                <div class="project-container">
+                    <img src="/api/placeholder/300/300" alt="VR Surgical Thread Simulator" class="project-image">
+                    <div class="project-content">
+                        <a href="https://www.linkedin.com/posts/daniel-mendoza-carro-ingenieriamultimedia_vr-unity3d-virtualreality-activity-6841376079052054528-nLBB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXS6jIBLj8nkqZ3ZKkgT7cHoEsdV6N8SzE" class="project-title">VR Surgical Thread Simulator</a>
+                        <p class="project-tagline">A Virtual Reality simulation along with the HTC Vive headset. Could be used in surgeon practices.</p>
+                    </div>
+                </div>
+                
+                <div class="project-container">
+                    <img src="/api/placeholder/300/300" alt="DeltaAircraft" class="project-image">
+                    <div class="project-content">
+                        <a href="https://danalan.itch.io/deltaaircraft" class="project-title">DeltaAircraft</a>
+                        <p class="project-tagline">A multiplatform arcade game developed in godot. Free demo available in the link below.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="section">
+                <h2>Certifications</h2>
+                <div class="certification-item">
+                    <h3>CV Builder</h3>
+                    <p>2020 - 2021 | Microsoft</p>
+                    <p>Credential ID: 111-222</p>
+                    <p>Credential URL: <a href="http://www.google.com">Google</a></p>
+                    <p>Details about cert. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget orci purus. Nullam ultrices neque nibh. Aenean fermentum, felis vulputate suscipit accumsan, sem enim bibendum augue, sed convallis arcu lacus at dui. Pellentesque et nibh suscipit, vestibulum turpis eu, semper tortor. Praesent felis nibh, eleifend id eleifend id, dictum id enim. Praesent venenatis erat non augue suscipit consectetur.</p>
+                    <p>Second paragraph. Sed eleifend enim ante, vitae efficitur purus fringilla vel. Ut euismod, sem sed vulputate venenatis, justo diam viverra velit, sed rhoncus leo leo eu justo. Suspendisse placerat risus ante, sed porta nisi blandit at.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Git learning</h3>
+                    <p>2019 | Microsoft</p>
+                    <p>Credential ID: 111-222</p>
+                    <p>Credential URL: <a href="http://www.github.com">Github</a></p>
+                    <p>Older certification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget orci purus. Nullam ultrices neque nibh. Aenean fermentum, felis vulputate suscipit accumsan, sem enim bibendum augue, sed convallis arcu lacus at dui. Pellentesque et nibh suscipit, vestibulum turpis eu, semper tortor. Praesent felis nibh, eleifend id eleifend id, dictum id enim. Praesent venenatis erat non augue suscipit consectetur.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column (Sidebar) -->
+        <div class="sidebar">
+            <div class="profile-header">
+                <img src="/api/placeholder/150/150" alt="Daniel Mendoza" class="profile-image">
+                <h1>Daniel Mendoza</h1>
+                <p class="tagline">Multimedia Engineer</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="section">
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:daniel.mendoza@mdz.es">daniel.mendoza@mdz.es</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:34625517194">34 625517194</a></li>
+                    <li><i class="fas fa-globe"></i> <a href="https://example.com/" target="_blank">example.com</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/danimdz" target="_blank">danimdz</a></li>
+                    <li><i class="fab fa-xing"></i> <a href="https://xing.com/profile/danimdz" target="_blank">danimdz</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/jekyll" target="_blank">jekyll</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/jekyllrb" target="_blank">@jekyllrb</a></li>
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section">
+                <h2>Skills &amp; Proficiency</h2>
+                <ul class="skills-list">
+                    <li>
+                        <div class="skill-name">Python & PyQt</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">C++</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">Java</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">Maya Autodesk</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">JavaScript, HTML5 & CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="section">
+                <h2>Languages</h2>
+                <ul class="languages-list">
+                    <li>
+                        <span class="language-name">Spanish</span>
+                        <span class="language-level">Native</span>
+                    </li>
+                    <li>
+                        <span class="language-name">English</span>
+                        <span class="language-level">Professional</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Interests Section -->
+            <div class="section">
+                <h2>Interests</h2>
+                <ul class="interests-list">
+                    <li class="interest-item">Skateboarding</li>
+                    <li class="interest-item">Snowboarding</li>
+                    <li class="interest-item">Cooking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+    </div>
+</body>
+</html>
