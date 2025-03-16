@@ -9,29 +9,18 @@ sidebar:
 
   # Profile information
   name: Daniel Mendoza
-  tagline: Multimedia Engineer
+  tagline: Multimedia Software Engineer
   avatar: profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
   email: daniel.mendoza@mdz.es
-  phone: 34 625517194 # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
-  citizenship:
-  website: https://example.com/ # Include the full website URL, including "http://" or "https://".
-  linkedin: danimdz
-  xing: danimdz
-  github: jekyll
-  telegram: # add your nickname without '@' sign
-  gitlab:
-  bitbucket:
-  bluesky: '@jekyllrb.bsky.social' # Specify your full Bluesky handle
-  twitter: '@jekyllrb'
-  stack-overflow: # Number/Username, e.g. 123456/danimdz
-  codewars:
-  goodreads: # Number-Username, e.g. 123456-danimdz
-  mastodon: # Please include your full Mastodon link here.
-  hackerrank: # Please provide your HackerRank username.
-  leetcode: # Please provide your LeetCode username.
-  pdf: # Add a PDF link here if you want to include a PDF custom version in your resume.
+  phone: +34 625517194 # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
+  citizenship: Spain
+  website: https://danmendoza.github.io/devportfolio/ # Include the full website URL, including "http://" or "https://".
+  linkedin: https://www.linkedin.com/in/daniel-mendoza-profile/
+  github: https://github.com/danmendoza/
+  youtube: https://www.youtube.com/watch?v=Jnmj1dXDbNk
+  itch.io: https://danalan.itch.io/
 
   languages:
     title: Languages
@@ -151,53 +140,19 @@ projects:
   - title: Spellbound
     link: "https://skydance.com/animation/#-"
     tagline: "When a powerful spell turns her parents into giant monsters, a teenage princess must journey into the wild to reverse the curse before it's too late. 3D Animation film Published on Netflix 2024."
+    image: "/var/www/html/images/spellbound_300x300.png"
 
   - title: VR Surgical Thread Simulator
     link: "https://www.linkedin.com/posts/daniel-mendoza-carro-ingenieriamultimedia_vr-unity3d-virtualreality-activity-6841376079052054528-nLBB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXS6jIBLj8nkqZ3ZKkgT7cHoEsdV6N8SzE"
     tagline: "A Virtual Reality simulation along with the HTC Vive headset. Could be used in surgeon practices."
+    image: "/var/www/html/images/vrsuture_300x300.png"
 
   - title: DeltaAircraft
     link: "https://danalan.itch.io/deltaaircraft"
     tagline: "A multiplatform arcade game developed in godot. Free demo available in the link below."
+    image: "/var/www/html/images/collage_deltaaircraft.png"
 
-oss:
-  title: OSS Contributions
-  intro: >
-    You can list your open source software contributions in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-  contributions:
-  - title: Tempo
-    link: "#"
-    tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
 
-  - title: Atom
-    link: "#"
-    tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-  - title: Delta
-    link: "#"
-    tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
-
-publications:
-  title: Publications
-  intro: |
-    You can list your publications in this section. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-    bibendum fringilla a eu lectus.
-  papers:
-  - title: The Art of Computer Programming
-    link: "#"
-    authors: Donald E. Knuth
-    conference: Addison-Wesley, 1968
-
-  - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-    link: "#"
-    authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-    conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-  - title: A syntax directed compiler for Algol 60
-    link: "#"
-    authors: Edgar T. Irons
-    conference: "Comm. ACM 4 (1961), 51–55"
 
 recommendations:
   title: Recommendations
