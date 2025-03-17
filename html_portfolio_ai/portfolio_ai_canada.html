@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Daniel Mendoza - Multimedia Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,6 +18,14 @@
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+        }
+        /* Reglas generales para enlaces */
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+        }
+        .contact-list a, .project-title {
+            color: inherit;
+            text-decoration: none;
         }
         .container {
             display: flex;
@@ -65,7 +74,7 @@
             color: #ecf0f1;
         }
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .contact-list {
             list-style: none;
@@ -115,7 +124,7 @@
         }
         .project-container {
             display: flex;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             align-items: flex-start;
             background-color: #f9f9f9;
             border-radius: 8px;
@@ -127,8 +136,8 @@
             transform: translateY(-5px);
         }
         .project-image {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
         }
         .project-content {
@@ -269,7 +278,154 @@
             color: #3498db;
             text-decoration: none;
         }
+        
+        /* Asegurar que los enlaces funcionan en PDF sin subrayados */
+        a[href] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        
+        /* Hack para PDF - mantener color pero asegurar funcionalidad */
+        @media print {
+            .contact-list a[href]::after,
+            .project-title[href]::after,
+            .footer a[href]::after {
+                content: "";
+                display: none;
+            }
+        }
+        
+        /* Reglas específicas para impresión */
+        @media print {
+            body {
+                background-color: white;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                font-size: 0.95em;
+                line-height: 1.4;
+            }
+            
+            /* No sobrescribir atributos de enlace al imprimir para mantener funcionalidad */
+            a, a:link, a:visited {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+            
+            a[href]:after {
+                content: none !important;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .main-content {
+                padding: 35px 40px;
+            }
+            
+            .sidebar {
+                padding: 30px 25px;
+            }
+            
+            h1 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            h2 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            
+            h3 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .section {
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                margin-bottom: 20px;
+                padding-bottom: 8px;
+            }
+            
+            .experience-item, .education-item, .project-item {
+                margin-bottom: 25px;
+            }
+            
+            .experience-title, .education-title, .project-title {
+                font-size: 15px;
+            }
+            
+            .experience-company, .education-university {
+                font-size: 14px;
+            }
+            
+            .experience-time, .education-time {
+                padding: 2px 8px;
+                margin-bottom: 8px;
+            }
+            
+            .project-container {
+                margin-bottom: 15px;
+            }
+            
+            .project-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .project-content {
+                padding: 8px;
+            }
+            
+            p, ul li {
+                margin-bottom: 5px;
+            }
+            
+            .profile-header {
+                margin-bottom: 35px;
+                padding: 50px 15px !important;
+            }
+            
+            .tagline {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+            
+            .contact-list li, .skills-list li, .languages-list li, .interests-list li {
+                margin-bottom: 6px;
+            }
+            
+            .tech-tag, .interests-list .interest-item {
+                padding: 2px 6px;
+                margin-right: 4px;
+                margin-bottom: 4px;
+            }
+            
+            /* Evitar que se dividan elementos importantes */
+            .project-container, .experience-item, .education-item, .certification-item {
+                page-break-inside: avoid;
+            }
+            
+            /* Reducir espacios en blanco */
+            .skills-list li {
+                margin-bottom: 6px;
+            }
+            
+            .skill-bar {
+                height: 6px;
+            }
+        }
     </style>
+    <script>
+    // Este script no es necesario, los enlaces funcionarán por sí mismos en la mayoría de los navegadores
+    </script>
 </head>
 <body>
     <div class="container">
@@ -280,14 +436,13 @@
                 <div class="section-title">
                     <h2><i class="fas fa-user-tie"></i> Career Profile</h2>
                 </div>
-                <p>Seasoned software engineer with proven expertise in development projects, collaborative team environments, and consistent deadline delivery. Demonstrated strong problem-solving capabilities and technical support skills at SKYDANCE ANIMATION, where I developed specialized Python tools that streamlined production workflows and increased departmental efficiency. Leveraged Unity expertise as a 3D Developer at IRTIC to create immersive simulations for medical applications. Proficient in UI/UX design principles and implementing robust custom graphics and logic across applications, plug-ins, and interactive software. Consistently transform complex technical requirements into elegant, user-friendly solutions that drive business value.</p>
-                <div style="margin-top: 15px;">
+                <p>Seasoned software engineer with proven expertise in development projects, collaborative team environments, and consistent deadline delivery. Demonstrated strong problem-solving capabilities and technical support skills at SKYDANCE ANIMATION, where I developed specialized Python tools that streamlined production workflows and increased departmental efficiency. Leveraged Unity expertise as a 3D Developer at IRTIC to create immersive simulations for medical applications.</p>
+                <div style="margin-top: 10px;">
                     <span class="tech-tag">Software Development</span>
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Unity3D</span>
                     <span class="tech-tag">UI/UX</span>
                     <span class="tech-tag">3D Graphics</span>
-                    <span class="tech-tag">Problem Solving</span>
                 </div>
             </div>
 
@@ -300,10 +455,10 @@
                     <div class="experience-title">Junior Technical Director</div>
                     <div class="experience-company">Skydance Animation Madrid</div>
                     <div class="experience-time">January 2022 – December 2024</div>
-                    <p>Helped studio departments by developing python tools and plug-ins for improving their workflows. Skills:</p>
+                    <p>Helped studio departments by developing Python tools and plug-ins to improve their workflows. Skills:</p>
                     <ul>
-                        <li>Software development: having an Agile approach, involved in different projects where departments required custom approaches. Involved in backend, frontend, and UX/UI design.</li>
-                        <li>Support: Attending to non-technical users and repairing the studio's pipeline were the main themes.</li>
+                        <li>Software development: Developed python plugins and automations in Maya Autodesk and Houdini for Crowds and Rigging departments. Helped Layout department by developing tools based on Pixar Usd.</li>
+                        <li>Support: offered technical support and helped on any kind of stopper.</li>
                         <li>Debug: Troubleshooting and optimizations.</li>
                     </ul>
                 </div>
@@ -311,11 +466,11 @@
                     <div class="experience-title">Unity 3D Developer</div>
                     <div class="experience-company">IRTIC, Valencia</div>
                     <div class="experience-time">January 2021 – April 2021</div>
-                    <p>Developed a physics based simulation of a surgical thread in Virtual Reality. Skills:</p>
+                    <p>Developed a physics-based simulation of surgical thread in Virtual Reality. Skills:</p>
                     <ul>
-                        <li>Design user interfaces for VR applications using Unity's UI system.</li>
-                        <li>Research physics papers.</li>
-                        <li>Implementation of the simulation in Unity3D using C#.</li>
+                        <li>Designed user interfaces for VR applications using Unity's UI system.</li>
+                        <li>Researched physics papers for accurate simulation models.</li>
+                        <li>Implemented the surgeon thread simulation in Unity3D using C#.</li>
                     </ul>
                 </div>
             </div>
@@ -325,14 +480,13 @@
                 <div class="section-title">
                     <h2><i class="fas fa-project-diagram"></i> Notable Projects</h2>
                 </div>
-                <p>List of projects involved into.</p>
                 
                 <div class="project-container">
                     <img src=".\resources\spellbound_300x300.png" alt="Spellbound, by Skydance Animation" class="project-image">
                     <div class="project-content">
                         <a href="https://skydance.com/animation/#-" class="project-title">Spellbound</a>
-                        <p class="project-tagline">When a powerful spell turns her parents into giant monsters, a teenage princess must journey into the wild to reverse the curse before it's too late. 3D Animation film Published on Netflix 2024.</p>
-                        <div style="margin-top: 10px;">
+                        <p class="project-tagline">When a powerful spell turns her parents into giant monsters, a teenage princess must journey into the wild to reverse the curse before it's too late. 3D Animation film published on Netflix in 2024.</p>
+                        <div style="margin-top: 5px;">
                             <span class="tech-tag">3D Animation</span>
                             <span class="tech-tag">Pipeline Tools</span>
                             <span class="tech-tag">Netflix</span>
@@ -343,13 +497,12 @@
                 <div class="project-container">
                     <img src=".\resources\vrsuture_300x300.png" alt="VR Surgical Thread Simulator" class="project-image">
                     <div class="project-content">
-                        <a href="https://www.linkedin.com/posts/daniel-mendoza-carro-ingenieriamultimedia_vr-unity3d-virtualreality-activity-6841376079052054528-nLBB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXS6jIBLj8nkqZ3ZKkgT7cHoEsdV6N8SzE" class="project-title">VR Surgical Thread Simulator</a>
-                        <p class="project-tagline">A Virtual Reality simulation along with the HTC Vive headset. Could be used in surgeon practices.</p>
-                        <div style="margin-top: 10px;">
+                        <a href="https://www.linkedin.com/posts/daniel-mendoza-carro-ingenieriamultimedia_vr-unity3d-virtualreality-activity-6841376079052054528-nLBB" class="project-title">VR Surgical Thread Simulator</a>
+                        <p class="project-tagline">A Virtual Reality simulation using the HTC Vive headset. Can be used for surgical training and practice.</p>
+                        <div style="margin-top: 5px;">
                             <span class="tech-tag">VR</span>
                             <span class="tech-tag">Unity3D</span>
                             <span class="tech-tag">HTC Vive</span>
-                            <span class="tech-tag">Physics Simulation</span>
                         </div>
                     </div>
                 </div>
@@ -358,11 +511,10 @@
                     <img src=".\resources\collage_deltaaircraft.png" alt="DeltaAircraft" class="project-image">
                     <div class="project-content">
                         <a href="https://danalan.itch.io/deltaaircraft" class="project-title">DeltaAircraft</a>
-                        <p class="project-tagline">A multiplatform arcade game developed in godot. Free demo available in the link below.</p>
-                        <div style="margin-top: 10px;">
+                        <p class="project-tagline">A multiplatform arcade game developed in Godot. Free demo available at the link below.</p>
+                        <div style="margin-top: 5px;">
                             <span class="tech-tag">Godot</span>
                             <span class="tech-tag">Game Development</span>
-                            <span class="tech-tag">Multiplatform</span>
                         </div>
                     </div>
                 </div>
@@ -377,13 +529,11 @@
                     <div class="education-title">Multimedia Software Engineering Degree</div>
                     <div class="education-university">University of Valencia</div>
                     <div class="education-time">2017 - 2021</div>
-                    <p>A multidisciplinary program combining computer science fundamentals with multimedia technologies and digital content development. The curriculum provided a strong foundation in:</p>
+                    <p>A multidisciplinary program combining computer science with multimedia technologies:</p>
                     <ul>
                         <li>Software development for multimedia applications</li>
                         <li>User interface and experience design (UI/UX)</li>
-                        <li>Web development and programming</li>
-                        <li>3D simulations and animations</li>
-                        <li>Computer graphics</li>
+                        <li>Web development and 3D simulations</li>
                     </ul>
                 </div>
             </div>
@@ -402,31 +552,27 @@
 
         <!-- Right Column (Sidebar) -->
         <div class="sidebar">
-            <div class="profile-header" style="background-color: #000000; padding: 25px 15px; margin: -40px -30px 30px -30px; border-bottom: 3px solid #3498db;">
-                <h1 style="color: #ffffff;">Daniel Mendoza</h1>
-                <div style="width: 50px; height: 3px; background-color: #3498db; margin: 15px auto;"></div>
-                <p class="tagline" style="font-size: 1.6em; color: #ffffff; font-weight: 500; letter-spacing: 0.5px;">Multimedia Software Engineer</p>
+            <div class="profile-header" style="background-color: #000000; padding: 70px 15px; margin: -40px -30px 40px -30px; border-bottom: 3px solid #3498db;">
+                <h1 style="color: #ffffff; font-size: 28px; margin-bottom: 30px; padding-top: 20px;">Daniel Mendoza</h1>
+                <div style="width: 60px; height: 3px; background-color: #3498db; margin: 30px auto;"></div>
+                <p class="tagline" style="font-size: 1.6em; color: #ffffff; font-weight: 500; letter-spacing: 0.5px; margin-top: 30px; padding-bottom: 20px;">Multimedia Software Engineer</p>
             </div>
 
             <!-- Contact Information -->
             <div class="section">
                 <h2>Contact</h2>
                 <ul class="contact-list">
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:daniel.mendoza@mdz.es">Email: daniel.mendoza@mdz.es</a></li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+34625517194">Phone: +34 625517194</a></li>
-                    <li><i class="fas fa-globe"></i> <a href="https://danmendoza.github.io/devportfolio/" target="_blank">Portfolio: danmendoza.github.io</a></li>
-                    <li><i class="fas fa-flag"></i> <span style="color: #ecf0f1;">Citizenship: Spain</span></li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/daniel-mendoza-profile/" target="_blank">LinkedIn: daniel-mendoza-profile</a></li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/danmendoza/" target="_blank">GitHub: danmendoza</a></li>
-                    <li><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/watch?v=Jnmj1dXDbNk" target="_blank">YouTube: Demo Reel</a></li>
-                    <li><i class="fab fa-itch-io"></i> <a href="https://danalan.itch.io/" target="_blank">Itch.io: danalan</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:daniel.mendoza@mdz.es">daniel.mendoza@mdz.es</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+34625517194">+34 625517194</a></li>
+                    <li><i class="fas fa-globe"></i> <a href="https://mural.uv.es/damenca/portfolio/inicio.html" target="_blank">Portfolio</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/daniel-mendoza-profile/" target="_blank">LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/danmendoza/" target="_blank">GitHub</a></li>
                 </ul>
             </div>
 
             <!-- Skills Section -->
-            <div class="section" style="background-color: rgba(52, 152, 219, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
-                <h2 style="margin-bottom: 10px;">Skills &amp; Proficiency</h2>
-                <p style="font-weight: bold; margin-bottom: 20px; font-size: 1.1em;">Skills:</p>
+            <div class="section" style="background-color: rgba(52, 152, 219, 0.05); padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                <h2 style="margin-bottom: 8px;">Skills &amp; Proficiency</h2>
                 <ul class="skills-list">
                     <li>
                         <div class="skill-name">Python & PyQt</div>
@@ -482,17 +628,11 @@
                 <ul class="interests-list">
                     <li>
                         <span class="interest-item">AI</span>
-                    </li>
-                    <li>
                         <span class="interest-item">Robotics</span>
-                    </li>
-                    <li>
                         <span class="interest-item">3D Printing</span>
                     </li>
                     <li>
                         <span class="interest-item">Skateboarding</span>
-                    </li>
-                    <li>
                         <span class="interest-item">Cooking</span>
                     </li>
                 </ul>
